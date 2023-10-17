@@ -7,7 +7,7 @@
  */
 int pf_pointer(va_list val)
 {
-	void *p;
+	const void *p;
 	char *s = "(nil)";
 	long int a;
 	int b;
