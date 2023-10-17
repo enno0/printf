@@ -16,37 +16,11 @@
  * @f: type pointer to function for the conversion specifier
  *
  */
-
 typedef struct format
 {
 	char *id;
 	int (*f)();
 } convert_match;
-
-/**
- * struct parameters - Handle the following flag characters for non-custom conversion specifiers
- * @plus_flag: on if plus_flag specified
- * @space_flag: on if _flag specified
- * @hashtag_flag: on if hashtag_flag specified
- *
- * @width: field width specified 
- * @precision: field precision specified
- *
- */
-
-
-typedef struct parameters
-{
-	unsigned int plus_flag	:1;
-	unsigned int space_flag  :1;
-	unsigned int hashtag_flag  :1;
-	unsigned int zero_flag  :1;
-	unsigned int minus_flag  :1;
-
-	unsigned int width;
-	unsigned int precision;
-
-}parms_t;
 
 int pf_pointer(va_list val);
 int printf_hex_aux(unsigned long int num);
