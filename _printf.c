@@ -7,12 +7,12 @@
 int _printf(const char * const format, ...)
 {
 	convert_match m[] = {
-		{"%s", printf_string}, {"%c", printf_char},
-		{"%%", printf_37},
-		{"%i", printf_int}, {"%d", printf_dec}, {"%r", printf_srev},
-		{"%R", printf_rot13}, {"%b", printf_bin}, {"%u", printf_unsigned},
-		{"%o", printf_oct}, {"%x", printf_hex}, {"%X", printf_HEX},
-		{"%S", printf_exclusive_string}, {"%p", printf_pointer}
+		{"%s", pf_string}, {"%c", pf_character},
+		{"%%", pf_per_cent_sign_37},
+		{"%i", pf_integer}, {"%d", pf_decimal}, {"%r", pf_string_reverse},
+		{"%R", pf_rot_13}, {"%b", pf_binary}, {"%u", pf_unsigned},
+		{"%o", pf_octal}, {"%x", pf_hex_decimal}, {"%X", pf_HEX_decimal},
+		{"%S", pf_exclusive_string}, {"%p", pf_pointer}
 	};
 
 	va_list args;
